@@ -48,14 +48,7 @@ pip install -r requirements.txt
 Create .env file in the root of your_project_dir.
 Customize your settings inside .env:
 ```
-DJANGO_SECRET_KEY=your_secret_key
-```
-Also you can move database settings from settings.py to the .env file.
-
-After that your django software should work.
-```buildoutcfg
-./manage.py migrate
-./manage.py createsuperuser
+BOT_TOKEN=your_secret_telegram_token
 ```
 
 # How to use
