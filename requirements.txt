@@ -1,3 +1,4 @@
 ipython==6.3.1
 python-telegram-bot==10.0.1
 requests==2.18.4
+python-dotenv==0.8.2
