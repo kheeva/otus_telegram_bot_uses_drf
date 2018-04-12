@@ -6,9 +6,12 @@ from telegram.ext import Updater, CommandHandler, Filters
 
 from handlers import start, error, price_handler
 
+from dotenv import load_dotenv
+
 
 def get_configured_updater():
-    updater = Updater("577389131:AAFNQfJiIqr6IWUS-TSttarOtjstTioTqUY")
+    load_dotenv()
+    updater = Updater(os.getenv('BOT_TOKEN'))
 
     def stop_and_restart():
         updater.stop()
