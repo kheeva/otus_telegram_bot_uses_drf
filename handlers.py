@@ -3,7 +3,7 @@ import logging
 from parser_helpers import (
     fetch_otus_json_data,
     calc_avg_price,
-    get_rnd_image_url_from_results,
+    get_first_image_url_from_results,
 )
 
 logging.basicConfig(
@@ -30,7 +30,7 @@ def price_handler(bot, update):
     else:
         update.message.reply_text('Средняя цена: %s рублей.' % avg_price)
 
-        image_url_to_show = get_rnd_image_url_from_results(otus_json_data)
+        image_url_to_show = get_first_image_url_from_results(otus_json_data)
         bot.send_photo(
             chat_id=update.message.chat_id,
             photo=image_url_to_show,
