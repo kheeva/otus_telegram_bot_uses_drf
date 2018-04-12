@@ -23,8 +23,6 @@ def price_handler(bot, update):
     otus_json_data = fetch_otus_json_data(query)
     avg_price = otus_json_data and calc_avg_price(otus_json_data) or None
 
-    print(otus_json_data)
-
     if not avg_price:
         update.message.reply_text('Нет цен на курс по %s' % query)
     else:
